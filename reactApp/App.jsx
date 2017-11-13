@@ -25,7 +25,14 @@ class App extends React.Component
         }
       ]
     }
+
+    // this.state = {
+    //   header: "This is Header",
+    //   content: "This is Content"
+    // }
   }
+
+
   render()
   {
     var i = 1;
@@ -55,12 +62,23 @@ class App extends React.Component
               <tbody>
                 { this.state.data.map((person,i) => <TableRow key = {i} data = {person} />) }
               </tbody>
-          </table>   
+          </table>
+
+             {/*This is the state header and content message*/}
+             {/*<h1>{this.state.header}</h1>
+             <h2>{this.state.content}</h2>*/}
+
+           {/*<h1>{this.props.headerProps}</h1>
+           <h2>{this.props.contentProps}</h2>  */}
       </div>
     );
   }
 }
 
+// App.defaultProps = {
+//   headerProps = "This is header prop",
+//   contentProps = " this is content props"
+// };
 //lets try stateless Example :
 
 class Header extends React.Component {
